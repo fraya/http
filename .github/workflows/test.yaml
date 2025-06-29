@@ -25,6 +25,10 @@ jobs:
 
       - uses: dylan-lang/install-opendylan@v3
 
+      - name: Install libunwind
+        run: |
+          sudo apt-get install -y libunwind-19
+
       - name: make install
         env:
           DYLAN: dylan-root
